@@ -142,20 +142,48 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: #D9D9D9;
     overflow: hidden;
-}
-
-.container {
-    width: 75vw;
-    height: 75vh;
-    background-color: 	#fff;
-    border: #c0f0ff solid 5px;
-    border-radius: 10px;
 }
 
 .headline {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    color: #556273;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+}
+
+.box {
+    position: relative;
+    height: 50vw;
+    width: 50vw;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.box-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #556273;
+}
+
+.box-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
 }
