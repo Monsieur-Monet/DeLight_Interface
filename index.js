@@ -17,7 +17,7 @@ fs.readFile('colorFile.json', (err, data) => {
 });
 
 app.post('/test', function(req, res){
-let data = JSON.stringify({color: convert.hex.hsv(req.body.color), brightness: req.body.brightness});
+let data = JSON.stringify({color: convert.hex.hsv(req.body.color), brightness: req.body.brightness, automationOff: req.body.automation});
 fs.writeFileSync('colorFile.json', data)
 res.sendStatus(200)
 })
