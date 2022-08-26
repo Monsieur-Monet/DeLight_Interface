@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Monsieur-Monet/DeLight_Interface/issues"
   },
-  "homepage": "https://github.com/Monsieur-Monet/DeLight_Interface#readme"
+  "homepage": "https://github.com/Monsieur-Monet/DeLight_Interface#readme",
+  "dependencies": {
+    "color-convert": "^2.0.1"
+  }
 }

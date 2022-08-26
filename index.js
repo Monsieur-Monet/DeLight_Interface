@@ -5,6 +5,8 @@ var app = express();
 const fs = require('fs');
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
+var convert = require('color-convert');
+
 
 app.get('/json', function(req, res){
 fs.readFile('colorFile.json', (err, data) => {
@@ -15,7 +17,7 @@ fs.readFile('colorFile.json', (err, data) => {
 });
 
 app.post('/test', function(req, res){
-let data = JSON.stringify({color: req.body.color, brightness: req.body.brightness});
+let data = JSON.stringify({color: convert.hex.hsv(req.body.color), brightness: req.body.brightness});
 fs.writeFileSync('colorFile.json', data)
 res.sendStatus(200)
 })
