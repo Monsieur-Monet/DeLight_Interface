@@ -22,21 +22,40 @@
                         DeLight
                     </div>
                 </div>
+                <div class="subline">
+                    Automatic Lamp Control
+                </div>
+                <div class="subsubline">
+                    Brightness & hue dependent on sun position, cloud coverage & rain.
+                </div>
                 <div class="flex">
                     <form method="post" action="/test">
-                        <div class="align">
-                            <input name="color" type="color" id='color' value="#c4dbff" />
-                            <div class="">Select the color for the lamp</div>
+                        <div class="align" style="padding-left: 30px">
+                            <input id="brightnesss" name="brightness" type="range" min="-255" max="255" value="0" oninput="this.nextElementSibling.value = this.value">
+                            <output></output>
+                            <div class="">Impacts the brightness of the automatic control for the lamp.
+                            </div>
                         </div>
-                        <div class="align">
-                            <input id="brightness" name="brightness" type="range" min="0" max="255" value="128">
-                            <div class="">Select the brightness for the lamp</div>
+                        <div class="subline">
+                            Manual Lamp Control
                         </div>
-                        <div class="align">
+                        <div class="align" style="padding-left: 30px">
                             <input type="checkbox" id="automation" name="automation" value="true">
-                            <div>Disable the automatic brightness control</label>
+                            <div>Enable manual lamp control
+                                </label>
                             </div>
                             <button class="button" type='submit'>submit</button>
+                        </div>
+                        <div class="align" style="padding-left: 30px">
+                            <input id="brightness" name="brightness" type="range" min="0" max="255" value="128" oninput="this.nextElementSibling.value = this.value">
+                            <output></output>
+                            <div class="">Select the brightness for the lamp.
+                            </div>
+                        </div>
+                        <div class="align" style="padding-left: 30px">
+                            <input name="color" type="color" id='color' value="#c4dbff" />
+                            <div class="">Select the color for the lamp. </div>
+                        </div>
                     </form>
                 </div>
             </div>
